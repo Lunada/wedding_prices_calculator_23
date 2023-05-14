@@ -1,4 +1,4 @@
-# zadanie_rekrutacyjne_23
+wedding_prices_calculator_23
 
 
 #Comment:

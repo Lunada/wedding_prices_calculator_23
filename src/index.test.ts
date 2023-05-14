@@ -23,6 +23,14 @@ describe("updateSelectedServices.select", () => {
         });
         expect(result).toEqual(["WeddingSession", "VideoRecording", "BlurayPackage"]);
     });
+    
+    test("should not select related service when VideoRecording is not selected", () => {
+        const result = updateSelectedServices(["WeddingSession", "Photography"], {
+            type: "Select",
+            service: "BlurayPackage"
+        });
+        expect(result).toEqual(["WeddingSession", "Photography"]);
+    });
 
     test("should select related service when one of main services is selected", () => {
         const result = updateSelectedServices(["WeddingSession", "Photography"], {
